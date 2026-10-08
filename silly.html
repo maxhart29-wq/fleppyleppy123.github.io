@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penguins!</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: sans-serif;
+        }
+        h1 {
+            font-size: 8vw; /* Makes the text scale with the screen size */
+            color: #333;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        .play-btn {
+            padding: 15px 30px;
+            font-size: 20px;
+            cursor: pointer;
+            border: none;
+            background-color: #008CBA;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <!-- Big Text -->
+    <h1 id="penguinText" style="display:none;">U GOT PENGUINS</h1>
+
+
+    <!-- Interactivity Button (Required by Web Browsers) -->
+    <button id="startBtn" class="play-btn">Click to Enter</button>
+
+
+    <!-- Hidden MP3 Audio Link -->
+    <!-- REPLACE 'tts_file.mp3' WITH THE ACTUAL URL OF YOUR MP3 HOST -->
+    <audio id="bgMusic" src="tts_file.mp3" loop></audio>
+
+
+    <script>
+        const startBtn = document.getElementById('startBtn');
+        const penguinText = document.getElementById('penguinText');
+        const bgMusic = document.getElementById('bgMusic');
+
+
+        startBtn.addEventListener('click', function() {
+            // Play the music
+            bgMusic.play();
+            
+            // Hide the button and show the big text
+            startBtn.style.display = 'none';
+            penguinText.style.display = 'block';
+        });
+    </script>
+
+
+</body>
+</html>
