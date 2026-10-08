@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -33,25 +33,20 @@
 </head>
 <body>
 
-
     <!-- Big Text -->
     <h1 id="penguinText" style="display:none;">U GOT PENGUINS</h1>
-
 
     <!-- Interactivity Button (Required by Web Browsers) -->
     <button id="startBtn" class="play-btn">Click to Enter</button>
 
-
     <!-- Hidden MP3 Audio Link -->
-    <!-- REPLACE 'tts_file.mp3' WITH THE ACTUAL URL OF YOUR MP3 HOST -->
-    <audio id="bgMusic" src="tts_file.mp3" loop></audio>
-
+    <!-- REPLACE 'your-audio-file.mp3' WITH THE ACTUAL URL OF YOUR MP3 HOST -->
+    <audio id="bgMusic" src="your-audio-file.mp3" loop></audio>
 
     <script>
         const startBtn = document.getElementById('startBtn');
         const penguinText = document.getElementById('penguinText');
         const bgMusic = document.getElementById('bgMusic');
-
 
         startBtn.addEventListener('click', function() {
             // Play the music
@@ -62,7 +57,6 @@
             penguinText.style.display = 'block';
         });
     </script>
-
 
 </body>
 </html>
